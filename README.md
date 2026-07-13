@@ -36,9 +36,12 @@ To make the PowerBI file function on your computer you may need to update the fi
 
 - Download the AdventureWorks_project.pbix file and all six csv/xlsx files from the dataset folder.
 - Open the PowerBI (.pbix) file.
-- Select the Data tab at the top of the sheet.
-- Open the Get Data dropdown (far left on the ribbon) and click Data Source Settings.
-- Go through each of the four listed data sources and click the "Change Source" option in the bottom left, updating the source files to where they are locally stored on your computer (make sure you select the correct csv file).
+- Open the Get transform data dropdown on the home ribbon and click Data Source Settings.
+- Go through each of the six listed data sources and click the "Change Source" option in the bottom left, updating the source files to where they are locally stored on your computer (make sure you select the correct file).
+
+<p align="center">
+  <img src="assets/data_model.png" width="800">
+</p>
 
 ### Territories
 
