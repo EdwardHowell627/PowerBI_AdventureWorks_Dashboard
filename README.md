@@ -1,5 +1,5 @@
 
-## Introduction
+# Introduction
 
 This is the fourth of four project meant to showcase my knowledge of GitHub and various data science tools, such as PowerBI. For this project, I worked with relational database documenting customers, products and sales for a store that sells bicycles and related accessories. Utilizing PowerBI I created an interable dashboard for exploring the dataset and revenue by three major aspects:
 
@@ -21,16 +21,17 @@ Below you can see screenshots of the three dashboards. At the bottom of the READ
   <img src="assets/products_dashboard.png" width="800">
 </p>
 
-## Tools Used
+# Tools Used
 
 - **PowerBI**
     - Power Query: Used to load and transform the dataset.
-    - Dax: Used to create measures to further analyze the data model.
+    - DAX: Used to create measures to further analyze the data model.
     - Charts: Used to visualize the dataset and allow filter via interacting with the charts.
+    - Buttons: Used to allow navigation between pages and clearing of slicers.
     - Slicers: Used to allow user interaction in filters the dataset.
     - Parameters: Used to allow the swapping of labels/axis measurements via slicers.
     
-## Dataset
+# Dataset
 
 To make the PowerBI file function on your computer you may need to update the filepaths for the dataset files. Follow these steps:
 
@@ -56,13 +57,53 @@ The Product tabel stores data on all the offered products with details such as p
 Once loaded I cleaned the dataset with power query, removing uneeded columns and fixing the auto-assigned data types. For more in depth usage, check out my Excel project which used power query significantly more.
 
 
-## Territories
+# Homepage
 <p align="center">
   <img src="assets/homepage.png" width="800">
 </p>
 
 For the dashboard there are 3 pages, focusing on the territories, customers, and products. To navigate between these pages I created a homepage with navigations buttons. Each of the dashboards also include a back button in the top left which navigates back to the homepage.
-## Customers
+
+On the homepage and other pages are cards that highlight singular key takeaway values. In the above example the total revenue, count of unique customers, and total orders placed are highlighted. These were created utilizing a card visual. Some of these values are simple aggregation such as the toal orders placed which was a count distinct aggregation on the OrderNumber (ID) in the sales table. The revenue caluclations we more complex because I needed to calculate the revenue for each order which requires using values from multiple tables. I created a calculated column in the sales table which calculated the revenue of an order with the following DAX code:
+```
+OrderRevenue = Sales[OrderQuantity] * RELATED(Products[ProductPrice]) 
+``` 
+With the calculated column, the rest was simple using a sum aggregation on said column. OrderRevenue is later used as the base for calculation other values such as the total revenue from a territory or a single customer. 
+
+# Territories
+
+<p align="center">
+  <img src="assets/territories_dashboard.png" width="800">
+</p>
+
+In addtional to cards and charts, I used parameters to allow the user to customize the unit of an axis or the labels. In the territories dashboard the user can swap between looking at contient values and region values. Additonally, they can swap between a y-axis measurement of revenue, orders, or items sold.
+
+<p align="center">
+  <img src="assets/parameter_table.png" width="800">
+</p>
+
+Using the parameter section of the modeling tab, I created parameters for territory/region, and revenue/orders/items. This creates a table which can then be used in axis section of building a visual.
+
+<p align="center">
+  <img src="assets/visual_building.png" width="175">
+</p>
+
+# Customers
 
 
-## Products
+# Products
+
+
+# Showcase
+
+<p align="center">
+  <img src="assets/territories.gif" width="800">
+</p>
+
+<p align="center">
+  <img src="assets/customers.gif" width="800">
+</p>
+
+<p align="center">
+  <img src="assets/products.gif" width="800">
+</p>
