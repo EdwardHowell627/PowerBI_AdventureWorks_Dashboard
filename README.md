@@ -1,7 +1,7 @@
 
 # Introduction
 
-Welcome to my portfolio project on Power BI, this project is the fourth of four projects meant to showcase my knowledge of the most common and important tools in data sciecne. For this project, I worked with the AdventureWorks sample relational database by Microsoft which documents customers, products, and sales for a store that sells bicycles and related accessories. This project focused on creating an interactable dashbaord which allows the user to explore and better understand the dataset. Below you can see screenshots of the dashboards and GIFs at the bottom of the README. The dashboards were created for exploring the dataset and revenue by three major aspects: 
+Welcome to my portfolio project on Power BI. This project is the fourth of four projects meant to showcase my knowledge of the most common and important tools in data science. For this project, I worked with the AdventureWorks sample relational database from Microsoft, which documents customers, products, and sales for a store that sells bicycles and related accessories. This project focused on creating an interactive dashboard that allows the user to explore and better understand the dataset. Below you can see screenshots of the dashboards. At the bottom of the README are GIFs showing the dashboards being used. The dashboards were created for exploring the dataset and revenue by three major aspects: 
 
 1. Territory
 2. Customer demographics
@@ -22,16 +22,17 @@ Welcome to my portfolio project on Power BI, this project is the fourth of four 
 # Tools Used
 
 - **Power BI**
-    - Power Query: Used to load and transform the dataset.
-    - DAX: Used to create measures to further analyze the data model.
-    - Charts: Used to visualize the dataset and allow filtering via interacting with the charts.
-    - Buttons: Used to allow navigation between pages and clearing of slicers.
-    - Slicers: Used to allow user interaction in filtering the dataset.
-    - Parameters: Used to allow the swapping of labels/axis measurements via slicers.
+    - **Power Query:** Used to load and transform the dataset.
+    - **DAX:** Used to create measures to further analyze the data model.
+    - **Charts:** Used to visualize the dataset and allow filtering via interacting with the charts.
+    - **Buttons:** Used to allow navigation between pages and clearing of slicers.
+    - **Slicers:** Used to allow user interaction in filtering the dataset.
+    - **Parameters:** Used to allow the swapping of labels/axis measurements via slicers.
+  - **GitHub**: Used to document and share my Power BI dashboard and analysis.
     
 # Dataset
 
-To make the Power BI file function on your computer, you may need to update the file paths for the dataset files. Follow these steps:
+To make the Power BI file function on your computer, you may need to update the file paths for the dataset files by following these steps:
 
 - Download the AdventureWorks_project.pbix file and all six csv/xlsx files from the dataset folder. Open the Power BI (.pbix) file.
 - Open the Get transform data dropdown on the home ribbon and click Data Source Settings.
@@ -61,11 +62,11 @@ Once loaded, I cleaned the dataset with Power Query, removing unneeded columns a
 
 For the dashboard there are 3 pages, focusing on the territories, customers, and products. To navigate between these pages, I created a homepage with navigation buttons. Each of the dashboards also includes a back button in the top left which navigates back to the homepage.
 
-On the homepage and other pages are cards that highlight singular key takeaway values. In the above example the total revenue, count of unique customers, and total orders placed are highlighted. These were created utilizing a card visual. Some of these values are simple aggregations, such as the total orders placed, which is a distinct count aggregation on the OrderNumber (ID) in the sales table. The revenue calculations were more complex because I needed to calculate the revenue for each order, which requires using values from multiple tables. I created a calculated column in the sales table that calculated the revenue of an order with the following DAX code:
+On the homepage and other pages are cards that highlight singular key takeaway values. In the above example the total revenue, count of unique customers, and total orders placed are highlighted. These were created utilizing a card visual. Some of these values are simple aggregations, such as the total orders placed, which is a distinct count aggregation on the OrderNumber in the sales table. The revenue calculations were more complex because I needed to calculate the revenue for each order, which requires using values from multiple tables. I created a calculated column in the sales table that calculated the revenue of an order with the following DAX code:
 ```
 OrderRevenue = Sales[OrderQuantity] * RELATED(Products[ProductPrice]) 
 ``` 
-With the calculated column, the rest was simple using a sum aggregation on said column. OrderRevenue is later used as the base for calculating other values such as the total revenue from a territory or a single customer. 
+With this calculated column, the rest was done with a sum aggregation on the column. OrderRevenue is later used as the base for calculating other values such as the total revenue from a territory or a single customer. 
 
 # Territories
 
@@ -112,13 +113,13 @@ Above are the three DAX expressions that make up the minimum value, maximum valu
 
 For the products page I focused on the ability to visually compare the successes of the many offered subcategories of products. Since the products had a wide range of success in both revenue and sales numbers, I opted to create a logarithmic scatterplot, which plots both the revenue and sales of an item. I also added color coding based on the higher-level category (bike, accessory, or clothing) of the item. 
 
-To help the user explore the successes of each category, I added many slicers to break down factors such as when the product was ordered, the age of the customer, and more. This is useful for focusing in on specific demographics, such as male manual workers in North America. It can also be useful for filtering the data to exclude outliers such as the customers who claimed to be over 100 years old (likely lied about their age) or filter the order date to only include orders after accessories and clothing started being sold (prior to July 2016, only mountain bikes and road bikes were sold).
+To help the user explore the successes of each category, I added many slicers to break down factors such as when the product was ordered, the age of the customer at time of order, and more. This is useful for focusing in on specific demographics, such as male manual workers in North America. It can also be useful for filtering the data to exclude outliers such as the customers who claimed to be over 100 years old (likely lied about their birth date) or filter the order date to only include orders after accessories and clothing started being sold (prior to July 2016, only mountain bikes and road bikes were sold).
 
 I also included a clear slicers button, which, for the convenience of the user, will clear all slicer filters they have created.
 
 # Conclusion
 
-While not as useful as the Excel dashboards on the data jobs dataset, I still hope you found this dataset interesting. Creating this project was a great exercise in working with relational databases and creating a visually appealing way to interact with said database. Creating dashboards in Power BI is significantly more user-friendly than in Excel, which is why I tried to include much more variety in the types of charts and slicers offered.
+While not as personally applicable as the Excel dashboards on the data jobs dataset, I still hope you found this dataset interesting. Creating this project was a great exercise in working with relational databases and creating a visually appealing way to interact with a database. Creating dashboards in Power BI is significantly more user-friendly than in Excel, which is why I tried to include much more variety in the types of charts and interaction offered.
 
 # Showcase
 
