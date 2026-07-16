@@ -1,13 +1,11 @@
 
 # Introduction
 
-This is the fourth of four projects meant to showcase my knowledge of GitHub and various data science tools, such as Power BI. For this project, I worked with a relational database documenting customers, products, and sales for a store that sells bicycles and related accessories. Utilizing Power BI, I created an interactable dashboard for exploring the dataset and revenue by three major aspects: 
+Welcome to my portfolio project on Power BI, this project is the fourth of four projects meant to showcase my knowledge of the most common and important tools in data sciecne. For this project, I worked with the AdventureWorks sample relational database by Microsoft which documents customers, products, and sales for a store that sells bicycles and related accessories. This project focused on creating an interactable dashbaord which allows the user to explore and better understand the dataset. Below you can see screenshots of the dashboards and GIFs at the bottom of the README. The dashboards were created for exploring the dataset and revenue by three major aspects: 
 
 1. Territory
 2. Customer demographics
 3. Product category
-
-Below you can see screenshots of the three dashboards. At the bottom of the README there is also a GIF of each, showcasing them being used.
 
 <p align="center">
   <img src="assets/territories_dashboard.png" width="800">
