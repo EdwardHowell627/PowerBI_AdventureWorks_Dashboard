@@ -1,23 +1,26 @@
 
 # Introduction
 
-Welcome to my portfolio project on Power BI. This project is the fourth of four projects meant to showcase my knowledge of the most common and important tools in data science. For this project, I worked with the AdventureWorks sample relational database from Microsoft, which documents customers, products, and sales for a store that sells bicycles and related accessories. This project focused on creating an interactive dashboard that allows the user to explore and better understand the dataset. Below you can see screenshots of the dashboards. At the bottom of the README are GIFs showing the dashboards being used. The dashboards were created for exploring the dataset and revenue by three major aspects: 
+Welcome to my portfolio project on Power BI. This project is the fourth of four projects meant to showcase my knowledge of the most common and important tools in data science. For this project, I worked with the AdventureWorks sample relational database from Microsoft, which documents customers, products, and sales for a store that sells bicycles and related accessories. This project focused on creating an interactive dashboard that allows the user to explore and better understand the dataset. The dashboards were created for exploring the dataset and revenue by three major aspects: 
 
 1. Territory
 2. Customer demographics
 3. Product category
 
+# Showcase
+
 <p align="center">
-  <img src="assets/territories_dashboard.png" width="800">
+  <img src="assets/territories.gif" width="800">
 </p>
 
 <p align="center">
-  <img src="assets/customers_dashboard.png" width="800">
+  <img src="assets/customers.gif" width="800">
 </p>
 
 <p align="center">
-  <img src="assets/products_dashboard.png" width="800">
+  <img src="assets/products.gif" width="800">
 </p>
+
 
 # Tools Used
 
@@ -120,17 +123,3 @@ I also included a clear slicers button, which, for the convenience of the user, 
 # Conclusion
 
 While not as personally applicable as the Excel dashboards on the data jobs dataset, I still hope you found this dataset interesting. Creating this project was a great exercise in working with relational databases and creating a visually appealing way to interact with a database. Creating dashboards in Power BI is significantly more user-friendly than in Excel, which is why I tried to include much more variety in the types of charts and interaction offered.
-
-# Showcase
-
-<p align="center">
-  <img src="assets/territories.gif" width="800">
-</p>
-
-<p align="center">
-  <img src="assets/customers.gif" width="800">
-</p>
-
-<p align="center">
-  <img src="assets/products.gif" width="800">
-</p>
